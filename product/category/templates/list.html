@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+ {% if category %}{{ category.name }}{% else %}Products{% endif %}
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container" style="background-color: #5555; height: 50px; margin-top: 53px; color: blue; padding:14px;">
+
+    {% for cat in category %}
+        <p>{{ cat.name }}</p>
+    {% endfor %}
+
+</div>
+
+<div>
+    <h1>{% if category %} {{category.name }} {% else %} not displayed {% endif %}
+
+        </h1>
+</div>
+{% for i in products %}
+<div class="col-sm-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+
+                <p style="font-size: 22px; color: darkblue; text-align: center;">{{ i.name }}</p>
+                <p id="one"><img src="{{ i.image.url }}" alt="mobile" width="auto"; height="300px";></p>
+            </div>
+
+            <div class="col-sm-6" id="two">
+                <p><b>Brand</b>:{{ i.name }}</p>
+                <p><b>Price:</b><br> <span style="color:red">{{ i.price }}</span></p>
+                <p><span style="color:green"> <b>Description:</b></span><br>{{ i.description }}</p>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+ {% endfor %}
+
+{% endblock %}
+

@@ -1,0 +1,39 @@
+#div1{
+    background-color: #333;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 19px;
+    height: 59px;
+
+}
+
+.li1{
+    display: inline;
+    padding: -10px;
+    list-style-type: none;
+    float: right;
+    margin-right:48px;
+}
+
+#div2{
+    background-color: #5555;
+    height: 79px;
+    margin-top: 53px;
+    color: blue;
+
+}
+
+#one{
+margin-left:100px;
+}
+
+#two{
+    padding: 30px;
+    margin-top: 38px;
+}
+
+p{
+font-size:16px;
+}
